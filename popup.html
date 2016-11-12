@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		@font-face {
+		    font-family: 'lato';
+		    src: url('lato.ttf');
+		}
+
+		body
+		{
+			padding: 0px;
+			margin: 0px;
+			width: 250px;
+			text-align: center;
+		}
+		#wrapper
+		{
+			font-family: lato;
+			padding: 40px 10px 10px 10px;
+			background: white;
+		}
+		#shareTab
+		{
+			background: #3FD487;
+			border-radius: 200px;
+			padding: 15px 45px;
+			font-size: 1.5em;
+			text-decoration: none;
+			color: white;
+			text-transform: uppercase;
+			width: 100%;
+		}
+		#shareTab:hover{
+			background: #6edea4;
+		}
+		#text, #info
+		{
+			font-size:  1.2rem;
+			color: #818181;
+		}
+		#sharedlink
+		{
+			font-size: 1.2em;
+			color: black;
+			text-align: center;
+			width: 100%;
+			padding: 10px 0px 10px 0px;
+		}
+		#icon
+		{
+			background-color: #369AF5;
+			padding: 10px 0px 10px 0px;
+		}
+		#generatedLink
+		{
+			color: #818181;
+		}
+
+		#generatedLink:hover
+		{
+			color: #369AF5;
+		}
+
+		.large
+		{
+			font-size: 2.3em;
+		}
+		.hidden
+		{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="icon"><img src="icon.png"></div>
+	<div id="wrapper">
+		<div id="something">
+		<a href="#" name="shareTab" id="shareTab">Share Tabs</a>
+		<br/><br/>
+		</div>
+		<p id="info" class="hidden">Share this link..</p>
+		<span id="generatedLink"></span>
+		<br/>
+		<hr/>
+		<p id="text">open shared tabs..</p>
+		<input type="text" id="sharedlink" placeholder="Place the link here..!">
+	</div>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="clipboard.min.js"></script>
+<script type="text/javascript" src="popup.js"></script>
+</body>
+</html>
