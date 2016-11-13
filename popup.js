@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	var links = Array();
 
-	//when user clicks share tabs button, get all the tab urls and store it to global 'link' variable
+	//when user clicks share tabs button, get all the tab urls and store it to global 'links' array
 	$('#shareTab').click(function(){
 		chrome.tabs.query({windowId: chrome.windows.WINDOW_ID_CURRENT}, function (tabs) {
     		tabs.forEach(function(tab){
