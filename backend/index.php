@@ -22,7 +22,7 @@
 	{
 		header('Location: https://github.com/iampiyushgupta/tabShare');
 	}
-	$connection = mysqli_connect('mysql.hostinger.in','u630530057_kali','piyush74659','u630530057_tbshr');
+	$connection = mysqli_connect('hostname','username','password','dbname');
 	if(isset($data) && !empty($data))
 	{
 		if($short = exists($data))
