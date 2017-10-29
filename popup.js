@@ -1,6 +1,14 @@
 $(document).ready(function(){
 	var links = Array();
 
+	if(navigator.onLine) {
+		$('#no-internet').hide();
+		$('#wrapper').show();
+	} else {
+		$('#no-internet').show();
+		$('#wrapper').hide();
+	}
+
 	//when user clicks share tabs button, get all the tab urls and store it to global 'links' array
 	$('#shareTab').click(function(){
 		chrome.tabs.query({windowId: chrome.windows.WINDOW_ID_CURRENT}, function (tabs) {
