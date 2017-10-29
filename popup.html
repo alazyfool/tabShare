@@ -35,7 +35,7 @@
 		#shareTab:hover{
 			background: #6edea4;
 		}
-		#text, #info
+		.text, #info
 		{
 			font-size:  1.2rem;
 			color: #818181;
@@ -75,6 +75,10 @@
 </head>
 <body>
 	<div id="icon"><img src="icon.png"></div>
+	<div id="no-internet">
+		<img src="no-internet.png">
+		<p class="text">No Internet</p>
+	</div>
 	<div id="wrapper">
 		<div id="something">
 		<a href="#" name="shareTab" id="shareTab">Share Tabs</a>
@@ -84,7 +88,7 @@
 		<span id="generatedLink"></span>
 		<br/>
 		<hr/>
-		<p id="text">open shared tabs..</p>
+		<p class="text">open shared tabs..</p>
 		<input type="text" id="sharedlink" placeholder="Place the link here..!">
 	</div>
 <script type="text/javascript" src="jquery.min.js"></script>
