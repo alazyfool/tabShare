@@ -1,9 +1,8 @@
 # tabShare
-[logo]: https://github.com/iampiyushgupta/tabShare/blob/master/icon.png "TabShare"
 
-A chrome extension to share the current tabs with anyone. 
+Chrome extension to share tabs
 
-### How to install and use?
+[### How to install and use tabshare?] (https://youtu.be/8HM9n6qWd24)
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=8HM9n6qWd24
 " target="_blank"><img src="http://img.youtube.com/vi/8HM9n6qWd24/0.jpg" 
