@@ -1,5 +1,8 @@
 <?php 
+	// For Cross-Origin Resource Sharing
 	header('Access-Control-Allow-Origin: *'); 
+
+	// Getting Request Headers
 	@$data = $_POST['links'];
 	@$link = sanitize($_GET['link']);
 	if($link == 'download')
@@ -7,6 +10,7 @@
 		$file = 'tabShare.zip';
 		
 		if (file_exists($file)) {
+			// Setting Response Headers
 			header('Content-Description: File Transfer');
 			header('Content-Type: application/octet-stream');
 			header('Content-Disposition: attachment; filename="'.basename($file).'"');
