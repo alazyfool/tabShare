@@ -26,9 +26,12 @@
 	{
 		header('Location: https://github.com/iampiyushgupta/tabShare');
 	}
+	
+	// connect to the database with valida credentials
 	$connection = mysqli_connect('hostname','username','password','dbname');
 	if(isset($data) && !empty($data))
 	{
+		// if the shortended link already exists, generate new one
 		if($short = exists($data))
 		{
 			echo 'tabshare.tk/'.$short;
@@ -58,6 +61,7 @@
 		echo '<a href="./download" target="_blank">Download extension</a>';
 	}
 
+	// function to sanitize user input
 	function sanitize($data)
 	{
 	   $data = trim($data);
@@ -66,6 +70,7 @@
 	   return $data;
 	}
 
+	// function to check if the shortened link already exists
 	function exists($string)
 	{
 		global $connection;
@@ -82,6 +87,7 @@
 		}
 	}
 
+	// function to generate shortened link
 	function generateRandomString()
 	{
 		$string = 'Aa1Bb2Cc3Dd4Ee5Ff6Gg7Hh8Ii9Jj0Kk1Ll2Mm3Nn4Oo5Pp6Qq7Rr8Ss9Tt0Uu1Vv2Ww3Xx4Yy5Zz6';
