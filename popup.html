@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title></title>
 	<style type="text/css">
 		@font-face {
-		    font-family: 'lato';
-		    src: url('lato.ttf');
+			font-family: 'lato';
+			src: url('lato.ttf');
 		}
 
-		body
-		{
+		body {
 			padding: 0px;
 			margin: 0px;
 			width: 250px;
 			text-align: center;
 		}
-		#wrapper
-		{
+
+		#wrapper {
 			font-family: lato;
 			padding: 40px 10px 10px 10px;
 			background: white;
 		}
-		#shareTab
-		{
+
+		#shareTab {
 			background: #3FD487;
 			border-radius: 200px;
 			padding: 15px 45px;
@@ -32,66 +32,87 @@
 			text-transform: uppercase;
 			width: 100%;
 		}
-		#shareTab:hover{
+
+		#shareTab:hover {
 			background: #6edea4;
 		}
-		.text, #info
-		{
-			font-size:  1.2rem;
+
+		.text,
+		#info {
+			font-size: 1.2rem;
 			color: #818181;
 		}
-		#sharedlink
-		{
+
+		.textbox {
 			font-size: 1.2em;
 			color: black;
 			text-align: center;
 			width: 100%;
 			padding: 10px 0px 10px 0px;
 		}
-		#icon
-		{
+
+		#icon {
 			background-color: #369AF5;
 			padding: 10px 0px 10px 0px;
 		}
-		#generatedLink
-		{
+
+		#generatedLink {
 			color: #818181;
 		}
 
-		#generatedLink:hover
-		{
+		#generatedLink:hover {
 			color: #369AF5;
 		}
 
-		.large
-		{
+		.large {
 			font-size: 2.3em;
 		}
-		.hidden
-		{
+
+		.hidden {
 			display: none;
 		}
+		.radio {
+			padding-top: 15px;
+			padding-left: 10px;
+			padding-right: 10px;
+			display:inline-block;
+			font-size: 1.5em;
+		}
+		
+		.invalid::placeholder {
+			color: #e74c3c;
+		}
+
 	</style>
 </head>
+
 <body>
-	<div id="icon"><img src="icon.png"></div>
+	<div id="icon">
+		<img src="icon.png">
+	</div>
 	<div id="no-internet">
 		<img src="no-internet.png">
 		<p class="text">No Internet</p>
 	</div>
 	<div id="wrapper">
-		<div id="something">
-		<a href="#" name="shareTab" id="shareTab">Share Tabs</a>
-		<br/><br/>
+		<div id="create-link">
+			<input type="text" class="textbox" id="title" name="Title" placeholder="Title">
+			<br/>
+				<label class="radio"><input type="radio" name="isPrivate" value="true">Private</label>
+				<label class="radio"><input type="radio" name="isPrivate" value="false" checked>Public</label><br/><br><br/>
+			<a href="#" name="shareTab" id="shareTab">Share Tabs</a>
+			<br/>
+			<br/>
 		</div>
 		<p id="info" class="hidden">Share this link..</p>
 		<span id="generatedLink"></span>
 		<br/>
 		<hr/>
 		<p class="text">open shared tabs..</p>
-		<input type="text" id="sharedlink" placeholder="Place the link here..!">
+		<input type="text" id="sharedlink" class="textbox" placeholder="Place the link here..!">
 	</div>
-<script type="text/javascript" src="jquery.min.js"></script>
-<script type="text/javascript" src="popup.js"></script>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="popup.js"></script>
 </body>
+
 </html>
