@@ -2,8 +2,8 @@
   "manifest_version": 2,
 
   "name": "tabShare",
-  "description": "share tabs with your friends..!",
-  "version": "1.0",
+  "description": "share tabs",
+  "version": "1.1",
 
   "browser_action": {
     "default_icon": "icon.png",
